@@ -87,7 +87,7 @@ namespace Marketo.UI.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abdullayevizi");
+            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abbasov");
             smtp.Send(mail);
             TempData["Verify"] = true;
             return RedirectToAction("Index", "Home");
@@ -185,7 +185,7 @@ namespace Marketo.UI.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abdullayevizi");
+            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abbasov");
             smtp.Send(mail);
             return RedirectToAction("index", "home");
         }
