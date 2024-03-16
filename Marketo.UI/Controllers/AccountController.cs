@@ -67,7 +67,7 @@ namespace Marketo.UI.Controllers
             string token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
             string link = Url.Action(nameof(VerifyEmail), "Account", new { email = user.Email, token }, Request.Scheme, Request.Host.ToString());
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("ilhamna@code.edu.az", "Furniture");
+            mail.From = new MailAddress("izzataa@code.edu.az", "Furniture");
             mail.To.Add(new MailAddress(user.Email));
 
             mail.Subject = "Verify Email";
@@ -87,7 +87,7 @@ namespace Marketo.UI.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abbasov");
+            smtp.Credentials = new NetworkCredential("izzataa@code.edu.az", "Abdullayevizi");
             smtp.Send(mail);
             TempData["Verify"] = true;
             return RedirectToAction("Index", "Home");
@@ -173,7 +173,7 @@ namespace Marketo.UI.Controllers
             string token = await _userManager.GeneratePasswordResetTokenAsync(user);
             string link = Url.Action(nameof(ResetPassword), "Account", new { email = user.Email, token }, Request.Scheme, Request.Host.ToString());
             MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("ilhamna@code.edu.az", "Furniture");
+            mail.From = new MailAddress("izzataa@code.edu.az", "Furniture");
             mail.To.Add(new MailAddress(user.Email));
 
             mail.Subject = "Reset Password";
@@ -185,7 +185,7 @@ namespace Marketo.UI.Controllers
             smtp.Port = 587;
             smtp.EnableSsl = true;
 
-            smtp.Credentials = new NetworkCredential("ilhamna@code.edu.az", "Abbasov");
+            smtp.Credentials = new NetworkCredential("izzataa@code.edu.az", "Abdullayevizi");
             smtp.Send(mail);
             return RedirectToAction("index", "home");
         }

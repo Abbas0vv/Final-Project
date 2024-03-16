@@ -26,7 +26,7 @@ namespace Marketo.UI.Controllers
         {
             if (!ModelState.IsValid)
             {
-                ModelState.AddModelError("Contact", "This is erorr message");
+                ModelState.AddModelError("Contact", "This is erorr mesaj");
                 return View();
             }
             string pattern = @"^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,4})$";

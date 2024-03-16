@@ -44,7 +44,7 @@ public class FurnitureController : Controller
         ViewBag.Categories = _context.Categories.ToList();
         if (furniture.MainPhoto == null || furniture.Photos == null)
         {
-            ModelState.AddModelError(string.Empty, "must choose one main photo");
+            ModelState.AddModelError(string.Empty, "must choose 1 main photo");
             return View();
         }
         if (furniture.Article == null)
